@@ -51,6 +51,16 @@ yarn add react-router-dom -S
 yarn add @types/react-router-dom -D
 ```
 
+## Add CSS Modules
+
+```shell
+yarn add react-css-modules -S
+yarn add @types/react-css-modules -D
+yarn add typings-for-css-modules-loader -D
+```
+
+Finally eject it and rewrite webpack.config
+
 ## Generating a project using create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
