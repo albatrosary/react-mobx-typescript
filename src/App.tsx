@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
-import './App.css';
+import * as CSSModules  from 'react-css-modules';
+
+import * as styles from './App.css';
 
 import { About, Friends, Home } from './containers';
 
@@ -12,6 +14,7 @@ class Welcome extends React.Component {
   }
 }
 */
+@CSSModules(styles)
 class App extends React.Component {
   public render() {
     return (
@@ -32,5 +35,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
