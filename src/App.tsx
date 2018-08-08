@@ -18,20 +18,18 @@ class Welcome extends React.Component {
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <BrowserRouter>
-          <div>
-            <ul>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='/about'>About</Link></li>
-              <li><Link to='/friends'>Friends</Link></li>
-            </ul>
-            <Route path='/' exact={true} component={Home} />
-            <Route path='/about' component={About} />
-            <Route path='/friends' component={Friends} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div styleName="App">
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/friends'>Friends</Link></li>
+          </ul>
+          <Route path='/' exact={true} component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/friends' component={Friends} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
