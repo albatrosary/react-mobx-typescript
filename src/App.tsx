@@ -3,6 +3,8 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 import './App.css';
 
+import * as scoped from 'css-scoper';
+
 import { About, Friends, Home } from './containers';
 
 /*
@@ -16,6 +18,11 @@ class App extends React.Component {
   public render() {
     return (
       <div className="App">
+        <style scoped={true}>
+          h1 {
+            color: pink;
+          }
+        </style>
         <BrowserRouter>
           <div>
             <ul>
