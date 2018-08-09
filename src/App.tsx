@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
-import './App.css';
+// import './App.css';
+
+import Style from 'style-it';
 
 import { About, Friends, Home } from './containers';
 
@@ -14,7 +16,20 @@ class Welcome extends React.Component {
 */
 class App extends React.Component {
   public render() {
-    return (
+    return Style.it(`
+      .App {
+        text-align: center;
+      }
+      .App-header {
+        background-color: #2ff;
+        height: 150px;
+        padding: 20px;
+        color: white;
+      }
+      header {
+        color: #ff0000;
+      }
+      `,
       <div className="App">
         <BrowserRouter>
           <div>

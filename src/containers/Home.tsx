@@ -1,7 +1,9 @@
 import * as React from 'react';
 
-import './Home.css';
+// import './Home.css';
 import logo from './logo.svg';
+
+import Style from 'style-it';
 
 // export class Name extends React.Component<INamePropType> {
 import { Name } from '../components/Name';
@@ -11,7 +13,32 @@ import CountContainer from '../containers/CountContainer';
 
 export class Home extends React.Component {
   public render() {
-    return (
+    return Style.it(`
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+      height: 80px;
+    }
+    
+    .App-header {
+      background-color: #222;
+      height: 150px;
+      padding: 20px;
+      color: white;
+    }
+    
+    .App-title {
+      font-size: 1.5em;
+    }
+    
+    .App-intro {
+      font-size: large;
+    }
+    
+    @keyframes App-logo-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }    
+      `,
       <div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
