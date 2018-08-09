@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
-import './App.css';
+// import './App.css';
+
+import { Style } from "react-style-tag";
 
 import { About, Friends, Home } from './containers';
 
@@ -15,7 +17,7 @@ class Welcome extends React.Component {
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
+      <div>
         <BrowserRouter>
           <div>
             <ul>
@@ -28,6 +30,11 @@ class App extends React.Component {
             <Route path='/friends' component={Friends} />
           </div>
         </BrowserRouter>
+        <Style>{`
+          div {
+            text-align: center;
+          }
+        `}</Style>
       </div>
     );
   }
